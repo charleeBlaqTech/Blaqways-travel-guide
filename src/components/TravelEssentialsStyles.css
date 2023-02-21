@@ -1,0 +1,125 @@
+:root{
+    --bgColor:#Feb561;
+    --btn-color:#A08986;
+    --textColor:#eaddcd;
+    --bgColor2: #4A2632;
+    --transition: 0.3s ease-in-out
+
+}
+
+#essentials{
+    width: 100%;
+    margin: 45px 0;
+    background-color: var(--textColor);
+}
+
+#essentials .essentials-row1{
+    width: 100%;   
+    padding: 20px 20px;
+    background-color: var(--bgColor);
+    border-radius: 12px;
+}
+#essentials .essentials-row1 p{
+    width: 60%;   
+    padding: 7px 0;
+    font-size: 22px;
+    color: var(--bgColor2);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 18px;   
+}
+#essentials .essentials-row1 h6{
+    width: 60%;
+    padding: 8px 0;
+    margin: 0 auto;
+    color: var(--bgColor2);
+    font-size: 22px;
+    text-align: center;  
+    margin-bottom: 18px; 
+}
+#essentials .essentials-row2{
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+#essentials .essentials-row2 .essentials-package-container{
+    flex: 13%;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 18px 12px;
+    height: 70px;
+    border: 1px solid var(--bgColor) ;
+    background-color: #fff;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bgColor2);
+}
+#essentials .essentials-button-container{
+    margin-top: 30px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#essentials .essentials-button-container button{
+    width: 220px;
+    height: 45px;
+    border: 1px solid var(--bgColor);
+    border-radius: 14px;
+    background-color: #fff;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+  }
+  #essentials .essentials-button-container button::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -35%;
+      width: 0;
+      height: 100%;
+      transform: translate(7deg);
+      transform-origin:top left;
+      transition-duration: 0.2s;
+      z-index: -1;
+      background-color: var(--bgColor2);
+      border-radius: 14px;
+  }
+  #essentials .essentials-button-container button a{
+      color: black;
+      text-decoration: none;
+  
+  }
+  
+  #essentials .essentials-button-container button:hover{
+      border: 0;
+  }
+  #essentials .essentials-button-container button:hover a{
+      color: #fff;
+  }
+  #essentials .essentials-button-container button:hover:after{
+      width:100%;
+      left: 0;
+  }
+
+
+
+
+@media (max-width:599px){
+    #essentials .essentials-row1 p{
+        font-size: 16px;
+    }
+    #essentials .essentials-row1 h6{
+        font-size: 16px;
+    }
+}

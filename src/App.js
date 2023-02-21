@@ -1,24 +1,25 @@
-
+import React, { Fragment } from "react"
 import './App.css';
+import {Routes, Route} from "react-router-dom"
+import Home  from "./components/Home";
+import About from "./components/About";
+import ExploreDestinations from "./components/ExploreDestinations";
+import Footer from "./components/Footer";
+
+
+
+
 
 function App() {
   return (
-    <div>
-      <h1 className="heading">My Contacts</h1>
-      <div className="card">
-        <div className="top">
-          <h2>Beyonce</h2>
-          <img
-            src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-            alt="avatar_img"
-          />
-        </div>
-        <div className="bottom">
-          <p>+123 456 789</p>
-          <p>b@beyonce.com</p>
-        </div>
-      </div>
-    </div>
+    <Fragment>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/explore" element={<ExploreDestinations/>}/>
+      </Routes>
+      <Footer/>
+    </Fragment>
   );
 }
 

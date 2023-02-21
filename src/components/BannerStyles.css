@@ -1,0 +1,125 @@
+:root{
+    --bgColor:#Feb561;
+    --btn-color:#A08986;
+    --textColor:#eaddcd;
+    --bgColor2: #4A2632;
+    --transition: 0.3s ease-in-out
+
+}
+
+
+
+#banner{
+    width: 100%;
+    height: 70vh;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("./images/italyimg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+#banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+    
+}
+
+
+#banner .banner-display-contents-container{
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+}
+#banner .banner-display-contents-container h5{
+    width: 80%;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: start;
+    color: var(--bgColor);
+}
+#banner .banner-display-contents-container p{
+    width: 80%;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+    text-align: start;
+    color: var(--textColor);
+
+}
+
+#banner .banner-display-contents-container .banner-btn-wrapper{
+    width: 50%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#banner .banner-display-contents-container .banner-btn-wrapper button{
+    width: 220px;
+    height: 45px;
+    margin: auto;
+    padding: 14px;
+    background-color: #fff;
+    border: 1px solid var(--bgColor);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+}
+#banner .banner-display-contents-container .banner-btn-wrapper button:hover{
+    border: 0;
+}
+
+#banner .banner-display-contents-container .banner-btn-wrapper button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:0;
+    transition: 0.4s;
+    background-color: var(--bgColor2);
+    border-radius: 12px;
+    z-index: -1;
+}
+#banner .banner-display-contents-container .banner-btn-wrapper button:hover:after{
+    height:100%;
+   
+}
+
+
+#banner .banner-display-contents-container .banner-btn-wrapper button a{
+    color: var(--bgColor2);
+    text-decoration: none;
+}
+#banner .banner-display-contents-container .banner-btn-wrapper button:hover a{
+    color: #fff;
+}
+
+
+
+@media (max-width:599px){
+    #banner .banner-display-contents-container h5{
+      
+        font-size: 14px;
+        font-weight: 300;
+       
+    }
+    #banner .banner-display-contents-container p{
+        width: 90%;
+        font-size: 12px;
+        font-weight: 300;
+    
+    }
+}
